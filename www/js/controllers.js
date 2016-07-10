@@ -41,16 +41,6 @@ function MesopotamiaController($scope, $ionicModal){
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }
 
-GreeceWingedVictoryController.$inject = SHARED_DI;
-function GreeceWingedVictoryController($scope, $ionicModal) {
-  var vm = this;
-  vm.title = '';
-  vm.description = '';
-  vm.imageCredit = 'Credit: Image by ___ © All rights reserved.';
-
-  ModalConfig($scope, $ionicModal, 'templates/description.html');
-}
-
 EgyptPyramidsController.$inject = SHARED_DI;
 function EgyptPyramidsController($scope, $ionicModal) {
   var vm = this;
@@ -73,6 +63,16 @@ function EgyptTombOfKingsController($scope, $ionicModal) {
       '<li>being properly prepared for the next life (which is reflect in the embalming process and other rituals)</li>' +
     '</ul>';
   vm.imageCredit = 'Credit: Image by David Anderson © All rights reserved.';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+GreeceWingedVictoryController.$inject = SHARED_DI;
+function GreeceWingedVictoryController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = '';
+  vm.description = '';
+  vm.imageCredit = 'Credit: Image by ___ © All rights reserved.';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }
