@@ -44,8 +44,8 @@ function MesopotamiaController($scope, $ionicModal){
 EgyptPyramidsController.$inject = SHARED_DI;
 function EgyptPyramidsController($scope, $ionicModal) {
   var vm = this;
-  vm.title = '';
-  vm.description = '';
+  vm.title = 'Pyramids of Giza';
+  vm.description = '<p>Pyramids like these were erected during the period of the Old Kingdom as burial places for the pharaohs. Successive Old Kingdom pharaohs built larger and higher pyramids. These complex structures were extremely challenging to make, and scholars have yet to reach a concensus on how such feats were achieved. We do know that these pyramids were truly creative engineering endeavors that have lasted through the&nbsp;ages.</p>';
   vm.imageCredit = 'Credit: Image by ___ © All rights reserved.';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');

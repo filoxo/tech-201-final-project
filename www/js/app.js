@@ -37,7 +37,7 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
       .state('egypt-pyramids', {
         url: '/egypt-pyramids',
         templateUrl: 'templates/egyptPyramids.html',
-        controller: 'EgyptPyramidsCtrl as egypt'
+        controller: 'EgyptPyramidsCtrl as e'
       })
       .state('egypt-tomb-of-kings', {
         url: '/egypt-tomb-of-kings',
