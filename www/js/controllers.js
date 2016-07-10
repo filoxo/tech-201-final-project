@@ -7,6 +7,7 @@ angular.module('creativ.controllers', [])
   .controller('EgyptRamesseumCtrl', EgyptRamesseumController)
   .controller('GreeceCoastCtrl', GreeceCoastController)
   .controller('GreeceCreteCtrl', GreeceCreteController)
+  .controller('GreeceParthenonCtrl', GreeceParthenonController)
   .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
 ;
 
@@ -98,6 +99,17 @@ function GreeceCreteController($scope, $ionicModal) {
   vm.description = '<p>We can judge the lifestyle of the Minoan people based on the remnants of their cities. Knossos had aqueducts, large grain storage facilities, and architectural enhancements for seasonal changes. There were open public courtyards and rooms for public assemblies, religious ceremonies, as well as administrative offices.</p>' +
     '<p>These people lived rich, leisurely lives which allowed them to expand on philosophy and critical thinking.</p>';
   vm.imageCredit = 'Credit: © All rights reserved by Garret Veley';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+GreeceParthenonController.$inject = SHARED_DI;
+function GreeceParthenonController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'The Parthenon';
+  vm.description = '<p>The Parthenon was built during the Greek Golden Age under the direction of Pericles as a temple to Athena Parthenos, the parton goddess of Athens. A gigantic statue of Athena (about 38 feet tall) inside the central room served as the center of worship.</p>' +
+    '<p>Most of the famous statues and reliefs were removed from the Parthenon by Great Britain, fearing for their safety during a war between the Greeks and Turks. Now all that is left are it\'s ruins, only a silhouette of its former glory.</p>';
+  vm.imageCredit = 'Credit: © All rights reserved by marcvege';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }

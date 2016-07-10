@@ -54,6 +54,11 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/greeceCrete.html',
         controller: 'GreeceCreteCtrl as e'
       })
+      .state('greece-parthenon', {
+        url: '/greece-parthenon',
+        templateUrl: 'templates/greeceParthenon.html',
+        controller: 'GreeceParthenonCtrl as e'
+      })
       .state('greece-winged-victory', {
         url: '/greece-winged-victory',
         templateUrl: 'templates/greeceWingedVictory.html',

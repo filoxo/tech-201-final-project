@@ -191,6 +191,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('greeceParthenon', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/greece-parthenon.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {
