@@ -2,9 +2,11 @@ angular.module('creativ.controllers', [])
   .controller('AppCtrl', AppController)
   .controller('HomeCtrl', HomeController)
   .controller('MesopotamiaCtrl', MesopotamiaController)
-  .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
   .controller('EgyptPyramidsCtrl', EgyptPyramidsController)
-  .controller('EgyptTombOfKingsCtrl', EgyptTombOfKingsController);
+  .controller('EgyptTombOfKingsCtrl', EgyptTombOfKingsController)
+  .controller('EgyptRamesseumCtrl', EgyptRamesseumController)
+  .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
+;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
 
@@ -63,6 +65,16 @@ function EgyptTombOfKingsController($scope, $ionicModal) {
       '<li>being properly prepared for the next life (which is reflect in the embalming process and other rituals)</li>' +
     '</ul>';
   vm.imageCredit = 'Credit: Image by David Anderson © All rights reserved.';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+EgyptRamesseumController.$inject = SHARED_DI;
+function EgyptRamesseumController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Ramesseum';
+  vm.description = '<p>The Ramesseum is the memorial temple of Pharaoh Ramesses II, also known as "Ramesses the Great". He was a pharaoh during the New Kingdom period. His memorial temple was to be used as a place of worship dedicated to pharaoh, god on earth, where his memory would have been kept alive after his death. Jean-François Champollion first visited the ruins of the site in 1829 and was the first to identify the hieroglyphs making up Ramesses\'s names and titles on the walls.</p>';
+  vm.imageCredit = 'Credit: Image by Mike Anton © All rights reserved.';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }

@@ -44,6 +44,11 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/egyptTombOfKings.html',
         controller: 'EgyptTombOfKingsCtrl as e'
       })
+      .state('egypt-ramesseum', {
+        url: '/egypt-ramesseum',
+        templateUrl: 'templates/egyptRamesseum.html',
+        controller: 'EgyptRamesseumCtrl as e'
+      })
       ;
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/home');
