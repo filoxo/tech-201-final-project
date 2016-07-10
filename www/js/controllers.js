@@ -5,6 +5,8 @@ angular.module('creativ.controllers', [])
   .controller('EgyptPyramidsCtrl', EgyptPyramidsController)
   .controller('EgyptTombOfKingsCtrl', EgyptTombOfKingsController)
   .controller('EgyptRamesseumCtrl', EgyptRamesseumController)
+  .controller('GreeceCoastCtrl', GreeceCoastController)
+  .controller('GreeceCreteCtrl', GreeceCreteController)
   .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
 ;
 
@@ -84,6 +86,17 @@ function GreeceCoastController($scope, $ionicModal) {
   var vm = this;
   vm.title = 'Coast of Greece';
   vm.description = '<p>This was the area the Minoans (predecessors of the Greek civilization), who were successful traders given that there are no major rivers or fertile soil to grow their own crops. They did not have military fortifications because the isolation of being on an island was a natural defence against enemies.</p>';
+  vm.imageCredit = 'Credit: © All rights reserved by Garret Veley';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+GreeceCreteController.$inject = SHARED_DI;
+function GreeceCreteController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Ruins of Crete';
+  vm.description = '<p>We can judge the lifestyle of the Minoan people based on the remnants of their cities. Knossos had aqueducts, large grain storage facilities, and architectural enhancements for seasonal changes. There were open public courtyards and rooms for public assemblies, religious ceremonies, as well as administrative offices.</p>' +
+    '<p>These people lived rich, leisurely lives which allowed them to expand on philosophy and critical thinking.</p>';
   vm.imageCredit = 'Credit: © All rights reserved by Garret Veley';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');

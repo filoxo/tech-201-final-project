@@ -142,20 +142,22 @@ angular.module('creativ.directives',
     return {
       restrict: 'E',
       link: function ($scope, $element, $attr) {
-        Create($element[0], function(scene){
+        Create($element[0], function (scene) {
           LoadEquirectangularMesh(scene, 'texture/mesopotamia-landscape.jpg')
         });
       }
-    }}])
+    }
+  }])
   .directive('egyptPyramids', [function () {
     return {
       restrict: 'E',
       link: function ($scope, $element, $attr) {
-        Create($element[0], function(scene){
+        Create($element[0], function (scene) {
           LoadEquirectangularMesh(scene, 'texture/egypt-pyramids.jpg')
         });
       }
-    }}])
+    }
+  }])
   .directive('egyptTombOfKings', [function () {
     return {
       restrict: 'E',
@@ -163,10 +165,33 @@ angular.module('creativ.directives',
         Create($element[0],
           function (scene) {
             LoadEquirectangularMesh(scene, 'texture/egypt-tomb-of-kings.jpg')
-        });
+          });
       }
     }
-  }]);
+  }])
+  .directive('greeceCoast', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/greece-coast.jpg')
+          });
+      }
+    }
+  }])
+  .directive('greeceCrete', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/greece-crete.jpg')
+          });
+      }
+    }
+  }])
+;
 
 function Create(glContainer, sceneContentFn) {
   var camera,
@@ -181,7 +206,7 @@ function Create(glContainer, sceneContentFn) {
     camera.target = new THREE.Vector3(0, 0, 0);
     scene = new THREE.Scene();
 
-    if( sceneContentFn && typeof(sceneContentFn) === 'function'){
+    if (sceneContentFn && typeof(sceneContentFn) === 'function') {
       sceneContentFn(scene);
     }
 
@@ -230,7 +255,7 @@ function Create(glContainer, sceneContentFn) {
   }
 }
 
-function LoadEquirectangularMesh(_scene, url){
+function LoadEquirectangularMesh(_scene, url) {
   var geometry = new THREE.SphereGeometry(500, 60, 40);
   geometry.scale(-1, 1, 1);
   var material = new THREE.MeshBasicMaterial({
