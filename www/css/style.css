@@ -38,3 +38,7 @@ ul.disc {
 ul.disc li {
   margin-bottom: 5px;
 }
+
+em {
+  font-style: italic;
+}
