@@ -24,6 +24,11 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl as home'
       })
+      .state('mesopotamia', {
+        url: '/mesopotamia',
+        templateUrl: 'templates/mesopotamia.html',
+        controller: 'MesopotamiaCtrl as e'
+      })
       .state('greece-winged-victory', {
         url: '/greece-winged-victory',
         templateUrl: 'templates/greeceWingedVictory.html',

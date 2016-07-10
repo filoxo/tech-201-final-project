@@ -138,6 +138,15 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('mesopotamia', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0], function(scene){
+          LoadEquirectangularMesh(scene, 'texture/mesopotamia-landscape.jpg')
+        });
+      }
+    }}])
   .directive('egyptPyramids', [function () {
     return {
       restrict: 'E',
