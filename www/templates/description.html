@@ -1,0 +1,12 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h3 class="title">{{ e.title }}</h3>
+  </ion-header-bar>
+  <ion-content>
+    <div class="padding">
+      <div ng-bind-html="e.description"></div>
+      <footer class="text-right text-small">{{ e.imageCredit }}</footer>
+      <button class="button button-small button-positive button-full" ng-click="closeModal()">Close</button>
+    </div>
+  </ion-content>
+</ion-modal-view>
