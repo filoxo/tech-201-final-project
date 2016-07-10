@@ -9,6 +9,7 @@ angular.module('creativ.controllers', [])
   .controller('GreeceCreteCtrl', GreeceCreteController)
   .controller('GreeceParthenonCtrl', GreeceParthenonController)
   .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
+  .controller('RomeForumCtrl', RomeForumController)
 ;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
@@ -121,6 +122,16 @@ function GreeceWingedVictoryController($scope, $ionicModal) {
   vm.description = '<p>The <em>Winged Victory of Samothrace</em>, also known as the <em>Nike of Samothrace</em>, is a Hellenistic  sculpture made of marble in the likeness of the Greek goddess Nike. It has been  displayed at the Louvre since 1884 and is one of the most celebrated sculptures in the world. It is one of a small number of major surviving original Hellenistic statues rather than Roman copies.</p>' +
     '<p>Here it is rendered inside a Greek sun temple, a building of religious worship as well as philosophy.</p>';
   vm.imageCredit = 'Credit: Image on threejs.org';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+RomeForumController.$inject = SHARED_DI;
+function RomeForumController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Roman Forum';
+  vm.description = '<p>This rectangular plaza is surrounded by the ruins of several important ancient government buildings at the center of the city of Rome. It was for centuries the center of Roman public life: the site of triumphal processions and elections; the venue for public speeches, criminal trials, and gladiatorial matches; and the nucleus of commercial affairs.</p>';
+  vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }

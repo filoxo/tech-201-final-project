@@ -202,6 +202,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('romeForum', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/rome-forum.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {

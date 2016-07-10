@@ -24,11 +24,13 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl as home'
       })
+
       .state('mesopotamia', {
         url: '/mesopotamia',
         templateUrl: 'templates/mesopotamia.html',
         controller: 'MesopotamiaCtrl as e'
       })
+
       .state('egypt-pyramids', {
         url: '/egypt-pyramids',
         templateUrl: 'templates/egyptPyramids.html',
@@ -44,6 +46,7 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/egyptRamesseum.html',
         controller: 'EgyptRamesseumCtrl as e'
       })
+
       .state('greece-coast', {
         url: '/greece-coast',
         templateUrl: 'templates/greeceCoast.html',
@@ -63,6 +66,12 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         url: '/greece-winged-victory',
         templateUrl: 'templates/greeceWingedVictory.html',
         controller: 'GreeceWingedVictoryCtrl as e'
+      })
+
+      .state('rome-forum', {
+        url: '/rome-forum',
+        templateUrl: 'templates/romeForum.html',
+        controller: 'RomeForumCtrl as e'
       })
       ;
     // if none of the above states are matched, use this as the fallback
