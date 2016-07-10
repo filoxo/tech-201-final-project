@@ -79,6 +79,16 @@ function EgyptRamesseumController($scope, $ionicModal) {
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }
 
+GreeceCoastController.$inject = SHARED_DI;
+function GreeceCoastController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Coast of Greece';
+  vm.description = '<p>This was the area the Minoans (predecessors of the Greek civilization), who were successful traders given that there are no major rivers or fertile soil to grow their own crops. They did not have military fortifications because the isolation of being on an island was a natural defence against enemies.</p>';
+  vm.imageCredit = 'Credit: © All rights reserved by Garret Veley';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
 GreeceWingedVictoryController.$inject = SHARED_DI;
 function GreeceWingedVictoryController($scope, $ionicModal) {
   var vm = this;
