@@ -82,9 +82,10 @@ function EgyptRamesseumController($scope, $ionicModal) {
 GreeceWingedVictoryController.$inject = SHARED_DI;
 function GreeceWingedVictoryController($scope, $ionicModal) {
   var vm = this;
-  vm.title = '';
-  vm.description = '';
-  vm.imageCredit = 'Credit: Image by ___ © All rights reserved.';
+  vm.title = 'Winged Victory of Samothrace';
+  vm.description = '<p>The <em>Winged Victory of Samothrace</em>, also known as the <em>Nike of Samothrace</em>, is a Hellenistic  sculpture made of marble in the likeness of the Greek goddess Nike. It has been  displayed at the Louvre since 1884 and is one of the most celebrated sculptures in the world. It is one of a small number of major surviving original Hellenistic statues rather than Roman copies.</p>' +
+    '<p>Here it is rendered inside a Greek sun temple, a building of religious worship as well as philosophy.</p>';
+  vm.imageCredit = 'Credit: Image on threejs.org';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }
