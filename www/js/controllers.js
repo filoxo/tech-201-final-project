@@ -12,6 +12,7 @@ angular.module('creativ.controllers', [])
   .controller('RomeForumCtrl', RomeForumController)
   .controller('RomeColosseumCtrl', RomeColosseumController)
   .controller('IstanbulMosqueCtrl', IstanbulMosqueController)
+  .controller('IstanbulMedinaCtrl', IstanbulMedinaController)
 ;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
@@ -153,6 +154,22 @@ function IstanbulMosqueController($scope, $ionicModal) {
   var vm = this;
   vm.title = 'The Blue Mosque';
   vm.description = '<p>Also known as the Sultan Ahmed Mosque located in Istanbul, Turkey\'s Historic Centre. It was built between 1609 and 1616 during the Ottoman empire. Magnificent hand-painted blue tiles adorn the mosque’s interior walls and at night the mosque is bathed in blue as lights frame the mosque’s five main domes, six minarets and eight secondary domes. It is still a major tourist center and popular place to visit and admire.</p>';
+  vm.imageCredit = 'Credit: All rights reserved by Mike Anton';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+IstanbulMedinaController.$inject = SHARED_DI;
+function IstanbulMedinaController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Medina';
+  vm.description = '<p>Medina was the Islamic prophet Muhammad\'s destination after his migration (Hijrah). It is also the burial place of Muhammad, and is the second-holiest city in Islam after Mecca.</p>' +
+    '<p>Similar to Mecca, non-Muslims are forbidden from entering the sacred core of Medina (but not the entire city) or the city center by the government. This image shows the modern state of Medina.</p>' +
+    '<div class="row">' +
+      '<div class="col col-60 col-offset-20">' +
+        '<img class="responsive" src="img/medina.png"/>' +
+      '</div>' +
+    '</div>';
   vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');

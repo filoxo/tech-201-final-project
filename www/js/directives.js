@@ -246,6 +246,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('istanbulMedina', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/istanbul-modern.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {
