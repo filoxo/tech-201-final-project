@@ -3,7 +3,7 @@
 *
 * @author: Carlos Filoteo
 */
-angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives'])
+angular.module('creativ', ['ionic','ionic.service.core', 'creativ.controllers', 'creativ.directives'])
   .run(function ($ionicPlatform, $rootScope) {
     $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins.Keyboard) {
