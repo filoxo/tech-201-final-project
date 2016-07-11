@@ -180,6 +180,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('chinaGreatWall', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/china-wall.jpg')
+          });
+      }
+    }
+  }])
   .directive('greeceCoast', [function () {
     return {
       restrict: 'E',

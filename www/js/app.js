@@ -47,6 +47,12 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         controller: 'EgyptRamesseumCtrl as e'
       })
 
+      .state('china-great-wall', {
+        url: '/china-great-wall',
+        templateUrl: 'templates/chinaGreatWall.html',
+        controller: 'ChinaGreatWallCtrl as e'
+      })
+
       .state('greece-coast', {
         url: '/greece-coast',
         templateUrl: 'templates/greeceCoast.html',

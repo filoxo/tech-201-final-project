@@ -5,6 +5,7 @@ angular.module('creativ.controllers', [])
   .controller('EgyptPyramidsCtrl', EgyptPyramidsController)
   .controller('EgyptTombOfKingsCtrl', EgyptTombOfKingsController)
   .controller('EgyptRamesseumCtrl', EgyptRamesseumController)
+  .controller('ChinaGreatWallCtrl', ChinaGreatWallController)
   .controller('GreeceCoastCtrl', GreeceCoastController)
   .controller('GreeceCreteCtrl', GreeceCreteController)
   .controller('GreeceParthenonCtrl', GreeceParthenonController)
@@ -84,6 +85,17 @@ function EgyptRamesseumController($scope, $ionicModal) {
   vm.title = 'Ramesseum';
   vm.description = '<p>The Ramesseum is the memorial temple of Pharaoh Ramesses II, also known as "Ramesses the Great". He was a pharaoh during the New Kingdom period. His memorial temple was to be used as a place of worship dedicated to pharaoh, god on earth, where his memory would have been kept alive after his death. Jean-François Champollion first visited the ruins of the site in 1829 and was the first to identify the hieroglyphs making up Ramesses\'s names and titles on the walls.</p>';
   vm.imageCredit = 'Credit: Image by Mike Anton © All rights reserved.';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+ChinaGreatWallController.$inject = SHARED_DI;
+function ChinaGreatWallController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'The Great Wall of China';
+  vm.description = '<p>After completing China\'s roadway infrastructure, the surplus labor was invested into what is possibly the largest construction ever undertaken in the history of mankind: the Great Wall of China.</p>' +
+    '<p>When it was completed, the Great Wall far surpassed the simple series of defensive walls the Zhou emperors had envisioned. The wall, when it reached its full length in the Ming Dynasty, stretched over 1,500 miles. </p>';
+  vm.imageCredit = 'Credit: All rights reserved by Manυ';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }
