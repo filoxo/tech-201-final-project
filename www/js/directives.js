@@ -235,6 +235,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('istanbulMosque', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/istanbul-mosque.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {

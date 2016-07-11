@@ -11,6 +11,7 @@ angular.module('creativ.controllers', [])
   .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
   .controller('RomeForumCtrl', RomeForumController)
   .controller('RomeColosseumCtrl', RomeColosseumController)
+  .controller('IstanbulMosqueCtrl', IstanbulMosqueController)
 ;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
@@ -142,6 +143,16 @@ function RomeColosseumController($scope, $ionicModal) {
   var vm = this;
   vm.title = 'Roman Colosseum';
   vm.description = '<p>The Colosseum in Rome is another magnificent structure. Built to accomodate 50,000&ndash;60,000 spectators, all individually identified with numbers for making seat assignments according to price. The stadium even had a provision for a cloth covering to be slid into place for shade. An extensive system of rooms and passageways was built below the arena floor so that animals and people could be housed prior to their entry into the arena. Today the Colosseum is in partial ruin because the Romans in the Middle Ages took the blocks to build other structures.</p>';
+  vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+IstanbulMosqueController.$inject = SHARED_DI;
+function IstanbulMosqueController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'The Blue Mosque';
+  vm.description = '<p>Also known as the Sultan Ahmed Mosque located in Istanbul, Turkey\'s Historic Centre. It was built between 1609 and 1616 during the Ottoman empire. Magnificent hand-painted blue tiles adorn the mosque’s interior walls and at night the mosque is bathed in blue as lights frame the mosque’s five main domes, six minarets and eight secondary domes. It is still a major tourist center and popular place to visit and admire.</p>';
   vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');

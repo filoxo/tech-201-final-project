@@ -78,6 +78,11 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/romeColosseum.html',
         controller: 'RomeColosseumCtrl as e'
       })
+      .state('istanbul-mosque', {
+        url: '/istanbul-mosque',
+        templateUrl: 'templates/istanbulMosque.html',
+        controller: 'IstanbulMosqueCtrl as e'
+      })
       ;
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/home');
