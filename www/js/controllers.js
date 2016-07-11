@@ -13,6 +13,7 @@ angular.module('creativ.controllers', [])
   .controller('RomeColosseumCtrl', RomeColosseumController)
   .controller('IstanbulMosqueCtrl', IstanbulMosqueController)
   .controller('IstanbulMedinaCtrl', IstanbulMedinaController)
+  .controller('TajMahalCtrl', TajMahalController)
 ;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
@@ -171,6 +172,16 @@ function IstanbulMedinaController($scope, $ionicModal) {
       '</div>' +
     '</div>';
   vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+TajMahalController.$inject = SHARED_DI;
+function TajMahalController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Medina';
+  vm.description = '<p>One of the most famous Islamic buildings, the Taj Mahal was built in the 16th century in the city of Agra, India, by Shah Jahan, a Mughal leader, as a tomb for his wife. The building is a perfectly symmetrical and balanced structure made from white marble extensively and beautifully inlaid with a flower motif consisting of semi-precious stones, gold, and silver. The lovely and restful park leading up to the entrance of the Taj Mahal represents paradise and invites a feeling of awe and peacefulness in those that visit.</p>';
+  vm.imageCredit = 'Credit: All rights reserved by Manυ';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }

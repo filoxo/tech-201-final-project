@@ -257,6 +257,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('tajMahal', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/taj-mahal.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {
