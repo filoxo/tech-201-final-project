@@ -14,6 +14,7 @@ angular.module('creativ.controllers', [])
   .controller('IstanbulMosqueCtrl', IstanbulMosqueController)
   .controller('IstanbulMedinaCtrl', IstanbulMedinaController)
   .controller('TajMahalCtrl', TajMahalController)
+  .controller('DomeOfTheRockCtrl', DomeOfTheRockController)
 ;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
@@ -180,8 +181,18 @@ TajMahalController.$inject = SHARED_DI;
 function TajMahalController($scope, $ionicModal) {
   var vm = this;
   vm.title = 'Medina';
-  vm.description = '<p>One of the most famous Islamic buildings, the Taj Mahal was built in the 16th century in the city of Agra, India, by Shah Jahan, a Mughal leader, as a tomb for his wife. The building is a perfectly symmetrical and balanced structure made from white marble extensively and beautifully inlaid with a flower motif consisting of semi-precious stones, gold, and silver. The lovely and restful park leading up to the entrance of the Taj Mahal represents paradise and invites a feeling of awe and peacefulness in those that visit.</p>';
+  vm.description = '<p>One of the most famous Islamic buildings, the Taj Mahal was built in the 16<sup>th</sup> century in the city of Agra, India, by Shah Jahan, a Mughal leader, as a tomb for his wife. The building is a perfectly symmetrical and balanced structure made from white marble extensively and beautifully inlaid with a flower motif consisting of semi-precious stones, gold, and silver. The lovely and restful park leading up to the entrance of the Taj Mahal represents paradise and invites a feeling of awe and peacefulness in those that visit.</p>';
   vm.imageCredit = 'Credit: All rights reserved by Manυ';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+DomeOfTheRockController.$inject = SHARED_DI;
+function DomeOfTheRockController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Dome of the Rock';
+  vm.description = '<p>Built in 685, the Dome of the Rock is a mosque in Jerusalem on the site where Muhammad ascended to heaven and beheld the glories of Allah. Muhammad was transported to the site and, on his horse, lifted off a great rock on the top of a mount in Jerusalem. This site is the same place as the ancient Jewish temple, and so is especially holy for Muslims and Jews (and Christians too).</p>';
+  vm.imageCredit = 'Credit: All rights reserved by Sam Rohn';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');
 }

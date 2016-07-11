@@ -268,6 +268,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('domeOfTheRock', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/dome-of-the-rock.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {

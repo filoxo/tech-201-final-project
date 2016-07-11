@@ -78,6 +78,7 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         templateUrl: 'templates/romeColosseum.html',
         controller: 'RomeColosseumCtrl as e'
       })
+
       .state('istanbul-mosque', {
         url: '/istanbul-mosque',
         templateUrl: 'templates/istanbulMosque.html',
@@ -92,6 +93,12 @@ angular.module('creativ', ['ionic', 'creativ.controllers', 'creativ.directives']
         url: '/taj-mahal',
         templateUrl: 'templates/tajMahal.html',
         controller: 'TajMahalCtrl as e'
+      })
+      
+      .state('dome-of-the-rock', {
+        url: '/dome-of-the-rock',
+        templateUrl: 'templates/domeOfTheRock.html',
+        controller: 'DomeOfTheRockCtrl as e'
       })
       ;
     // if none of the above states are matched, use this as the fallback
