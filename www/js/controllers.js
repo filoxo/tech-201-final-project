@@ -10,6 +10,7 @@ angular.module('creativ.controllers', [])
   .controller('GreeceParthenonCtrl', GreeceParthenonController)
   .controller('GreeceWingedVictoryCtrl', GreeceWingedVictoryController)
   .controller('RomeForumCtrl', RomeForumController)
+  .controller('RomeColosseumCtrl', RomeColosseumController)
 ;
 
 var SHARED_DI =  ['$scope', '$ionicModal'];
@@ -131,6 +132,16 @@ function RomeForumController($scope, $ionicModal) {
   var vm = this;
   vm.title = 'Roman Forum';
   vm.description = '<p>This rectangular plaza is surrounded by the ruins of several important ancient government buildings at the center of the city of Rome. It was for centuries the center of Roman public life: the site of triumphal processions and elections; the venue for public speeches, criminal trials, and gladiatorial matches; and the nucleus of commercial affairs.</p>';
+  vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
+
+  ModalConfig($scope, $ionicModal, 'templates/description.html');
+}
+
+RomeColosseumController.$inject = SHARED_DI;
+function RomeColosseumController($scope, $ionicModal) {
+  var vm = this;
+  vm.title = 'Roman Colosseum';
+  vm.description = '<p>The Colosseum in Rome is another magnificent structure. Built to accomodate 50,000&ndash;60,000 spectators, all individually identified with numbers for making seat assignments according to price. The stadium even had a provision for a cloth covering to be slid into place for shade. An extensive system of rooms and passageways was built below the arena floor so that animals and people could be housed prior to their entry into the arena. Today the Colosseum is in partial ruin because the Romans in the Middle Ages took the blocks to build other structures.</p>';
   vm.imageCredit = 'Credit: Some rights reserved by Alexandre Duret-Lutz';
 
   ModalConfig($scope, $ionicModal, 'templates/description.html');

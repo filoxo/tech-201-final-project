@@ -224,6 +224,17 @@ angular.module('creativ.directives',
       }
     }
   }])
+  .directive('romeColosseum', [function () {
+    return {
+      restrict: 'E',
+      link: function ($scope, $element, $attr) {
+        Create($element[0],
+          function (scene) {
+            LoadEquirectangularMesh(scene, 'texture/rome-colosseum.jpg')
+          });
+      }
+    }
+  }])
 ;
 
 function Create(glContainer, sceneContentFn) {
