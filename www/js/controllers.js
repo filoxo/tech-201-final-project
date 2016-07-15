@@ -23,7 +23,7 @@ var SHARED_DI =  ['$scope', '$ionicModal'];
 AppController.$inject = SHARED_DI;
 function AppController($scope, $ionicModal) {
   $scope.data = {
-    enableAwesome: true
+    lesson1: false
   };
   $ionicModal.fromTemplateUrl('templates/settings.html', {
     scope: $scope,
