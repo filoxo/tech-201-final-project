@@ -1,7 +1,77 @@
 <ion-view>
   <ion-pane>
-    <ion-content scroll="false" padding="false">
-      <cardboard-gl></cardboard-gl>
+    <ion-content>
+      <div class="card">
+        <div class="item intro item-text-wrap">
+          <h1>Welcome!</h1>
+          <p>
+            This course is designed so that all majors and interests will enjoy the class. It discusses history with from a scientific viewpoint as well as a broad, traditional liberal arts treatment. The major civilizations are examined in a depth appropriate for their contribution to our society.
+            <br/>
+            <br/>
+            Begin by watching the lesson videos below. Some lessons are accompanied by enhanced 3D images to better visualize these locations and cultures.</p>
+          <div class="text-right">
+            <button class="button button-outline button-light button-small">CLOSE</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider" ng-click="data.lesson1 = !data.lesson1">
+          Lesson 1
+        </div>
+        <div class="item item-text-wrap" ng-show="data.lesson1">
+          <div class='video-responsive'>
+            <iframe src='https://www.youtube.com/embed/SDk2zTBRFFI' frameborder='0' allowfullscreen></iframe>
+          </div>
+          <p class="text-right padding-top">
+            <a class="button button-dark icon-right ion-ios-location" ui-sref="mesopotamia">Mesopotamia</a>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 2
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 3
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 4
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 5
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 6
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 7
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 8
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 9
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-divider">
+          Lesson 10
+        </div>
+      </div>
     </ion-content>
   </ion-pane>
 </ion-view>
