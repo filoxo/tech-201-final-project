@@ -1,7 +1,7 @@
 <ion-view>
   <ion-pane>
     <ion-content>
-      <div class="card">
+      <div class="card" ng-show="showWelcome">
         <div class="item intro item-text-wrap">
           <h1>Welcome!</h1>
           <p>
@@ -9,8 +9,8 @@
             <br/>
             <br/>
             Begin by watching the lesson videos below. Some lessons are accompanied by enhanced 3D images to better visualize these locations and cultures.</p>
-          <div class="text-right">
-            <button class="button button-outline button-light button-small">CLOSE</button>
+          <div class="text-right padding-top">
+            <button class="button button-outline button-light button-small" ng-click="showWelcome = !showWelcome">CLOSE</button>
           </div>
         </div>
       </div>

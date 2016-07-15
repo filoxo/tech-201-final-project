@@ -22,6 +22,7 @@ var SHARED_DI =  ['$scope', '$ionicModal'];
 
 AppController.$inject = SHARED_DI;
 function AppController($scope, $ionicModal) {
+  $scope.showWelcome = true;
   $scope.data = {
     lesson1: false
   };
